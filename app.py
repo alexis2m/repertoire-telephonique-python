@@ -42,7 +42,7 @@ def menu_chercher():
         On stocke dans un tableau toutes les lignes du fichier repertoire.txt. On parcoure toutes les lignes jusqu'à trouver une concordance avec le 'nom'
     '''
     nom = input("Entrer un nom : ")
-    tableau = [] 
+    tableau = []
     total = 0
     tel = ""
     nom = nom+'\n'
@@ -52,15 +52,14 @@ def menu_chercher():
         for ligne in f:
             tableau.append(ligne)
             total += 1
-    for i in range(0,total):
-    	if tableau[i] == nom:
-    		tel = tableau[i+1]
+    for i in range(total):
+        if tableau[i] == nom:
+        	tel = tableau[i+1]
     if tel != "":
-    	print("Le numéro recherché est: ",tel.replace('\n', ''))
-    	print()
+        print("Le numéro recherché est: ",tel.replace('\n', ''))
     else:
-    	print("Inconnu")
-    	print()
+        print("Inconnu")
+    print()
     menu()
                 
 
